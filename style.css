@@ -5,17 +5,43 @@
 
 body {
     margin: 0px;
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace
+}
+
+body {
+    display: block;
+    background-color: #8ac4f0;
 }
 header, section {
+    background-color: #b3f08a;
     padding: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    
 }
 p, li {
     line-height: 1.5em;
+    background-color: #8ad6f0;
 }
 
 #inspiration {
-    background-color: #F0F0F0;
+    background-color: #f08ae4;
     padding-top: 40px;
     padding-bottom: 40px;
+    text-align: center;
+}
+
+#homework{
+    background-color: #8ac4f0;
+    text-align: center;
+}
+
+#tutorials{
+    background-color: #a98af0;
+    text-align: center;
+}
+
+#evanston{
+    background-color: #b3f08a;
+    text-align: center;
 }
