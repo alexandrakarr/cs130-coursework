@@ -14,7 +14,7 @@ a, a:hover, a:visited, a:active {
 /**********/
 /* Layout */
 /**********/
-aside, footer, header, nav, section, article {
+aside, footer, section, article {
     display: flex;
     flex-direction: column;
 }
@@ -36,29 +36,127 @@ aside {
 header {
     background: #111;
     position: fixed;
+    height: 100px;
     width: calc(100vw - 250px);
     left: 250px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    padding: 20px;
 }
 
+header a{
+    margin: 10px;
+    border:#fff 1px solid;
+    padding: 10px;
+    border-radius: 70%;
+}
+
+#profile{
+    background-color: #222;
+    border:#222
+}
 main {
     background: #111;
     grid-area: main;
     min-height: calc(350px);
     max-height: calc(100vh - 100px);
     overflow-y: auto;
+    overflow-x: auto;
     z-index: 3;
 }
+
+article{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    grid-template-areas:
+      "a b c d e"
+      "f g h i j";
+}
+
+.section{
+    grid-area: a;
+}
+
+.section{
+    grid-area: b;
+}
+
+.section {
+    grid-area: c;
+}
+
+.section{
+    grid-area: d;
+}
+
+.section{
+    grid-area: e;
+}
+
+.section{
+    grid-area: f;
+}
+
+.section{
+    grid-area: g;
+}
+
+.section{
+    grid-area: h;
+}
+
+.section{
+    grid-area: i;
+}
+
+.section{
+    grid-area: j;
+}
+
 
 nav {
     margin-top: 100px;
 }
+
 
 footer {
     background: #222;
     grid-area: bottom;
 }
 
+.artist-card img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 15px;
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+}
 
+.artist-card{
+    background-color: #222;
+    border-radius: 10%;
+}
+
+h2{
+    font-size: small;
+    margin-left: 10px;
+}
+
+p{
+    font-size: smaller;
+    margin-left: 10px;
+}
+
+.play-button{
+    margin-left: 10px;
+    margin-bottom: 7px;
+}
 /***************************/
 /* Accessories & Florishes */
 /***************************/
@@ -81,17 +179,75 @@ footer {
 /***************************/
 
 /* Your Code Here */
+aside a{
+    margin-left: 20px;
+}
 
+aside h1{
+    margin-left: 20px;
+}
 
+.fas {
+    margin-top: 10px;
+}
 
+.fas {
+    margin-top: 10px;
+}
+
+.fas {
+    margin-top: 10px;
+}
 /********************************/
 /* Part B: Header & Nav Styling */
 /********************************/
 
 /* Your Code Here */
 
+nav a{
+    padding: 12px;
+}
 
+nav{
+    margin-bottom: 20px;
+}
 
+@media only screen and (max-width: 1000px) {
+    article{
+        display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    grid-template-areas:
+      "a b c"
+      "d e f"
+      "g h i"
+      "j . .";
+        
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    article{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e f"
+      "g h"
+      "i j";
+    }
+
+    #upgrade{
+        display: none;
+    }
+
+        
+}
 
 
 /*************************/
@@ -108,5 +264,4 @@ footer {
 /**************************/
 
 /* Your Code Here */
-
 
